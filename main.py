@@ -44,7 +44,7 @@ class Client(discord.Client):
 
     async def sound(self, freq) -> None:
         freq = max(100, freq)
-        freq = min(2000, freq)
+        freq = min(2137, freq)
         print("Beeped {} Hz".format(freq))
         os.system("env -i beep -f {} -l 500".format(freq))
         await self._guild.text_channels[1].send("Beeped")
